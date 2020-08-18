@@ -680,7 +680,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-md-8 mx-auto">
-                    <form _lpchecked="1">
+                    <form _lpchecked="1" action="POST" data-netlify="true">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -704,11 +704,12 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea rows="5" class="form-control"
-                                        placeholder="What are you looking for?" required></textarea>
+                                    <textarea rows="5" class="form-control" placeholder="What are you looking for?"
+                                        required></textarea>
                                 </div>
                             </div>
                         </div>
+                        <div data-netlify-recaptcha="true"></div>
                         <div class="text-center mt-3">
                             <button class="btn btn-primary">SEND</button>
                         </div>
