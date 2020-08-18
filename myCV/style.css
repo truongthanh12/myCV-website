@@ -1232,7 +1232,7 @@ h2 {
 }
 .captcha {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 .work {
   position: relative;
