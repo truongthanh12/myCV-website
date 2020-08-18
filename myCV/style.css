@@ -3,7 +3,9 @@ body {
   background: #fff;
   color: #222;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .navbar-shrink {
   padding-top: 0;
   padding-bottom: 0;
@@ -1228,6 +1230,7 @@ p,
 h2 {
   text-align: center;
 }
+
 .work {
   position: relative;
   overflow: hidden;

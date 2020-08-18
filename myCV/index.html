@@ -174,7 +174,7 @@
                     <div class="progress">
                         <div class="progress-bar"></div>
                     </div>
-                    <a class="smpl-step-icon" style="background-color:#eee"><i class="fa fa-repeat"
+                    <a class="smpl-step-icon" style="background-color:#eee"><i class="fa fa-search"
                             style="font-size: 60px"></i>
                         <div class="icon-badge">Finding..</div>
                     </a>
@@ -786,12 +786,12 @@
 
 
         <!-- tooltip -->
-        <script>$('[data-toggle="tooltip"]').tooltip({
+        <!-- <script>$('[data-toggle="tooltip"]').tooltip({
                 trigger: "hover",
             });
             $(".fa").click(function () {
                 $('[data-toggle="tooltip"]').tooltip("hide");
-            });</script>
+            });</script> -->
 
         <!-- wowjs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -838,6 +838,7 @@
                 },
             });
         </script>
+
         <!-- mobile menu -->
         <script>
             $(window).scroll(function () {
@@ -893,7 +894,22 @@
         </script>
 
         <!-- TypeWriter -->
-        <script>class TypeWriter {
+        <script>
+            // back to top
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $(".scroll-top-top").fadeIn("300");
+                } else {
+                    $(".scroll-top-top").fadeOut("200");
+                }
+            });
+
+            $(document).ready(function () {
+                $(".scroll-top-top").on("click", function () {
+                    $("html, body").animate({ scrollTop: 0 }, "");
+                });
+            });
+            class TypeWriter {
                 constructor(txtElement, words, wait = 3000) {
                     this.txtElement = txtElement;
                     this.words = words;
@@ -961,20 +977,7 @@
 
 
 
-            // back to top
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 300) {
-                    $(".scroll-top-top").fadeIn("300");
-                } else {
-                    $(".scroll-top-top").fadeOut("200");
-                }
-            });
 
-            $(document).ready(function () {
-                $(".scroll-top-top").on("click", function () {
-                    $("html, body").animate({ scrollTop: 0 }, "");
-                });
-            });
 
         </script>
 
