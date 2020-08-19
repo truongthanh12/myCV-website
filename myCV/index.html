@@ -770,11 +770,11 @@
             </div>
         </footer>
 
-        <div class="top-arrow">
+        <!-- <div class="top-arrow">
             <span class="scroll-top-top">
                 <i class="fa fa-arrow-up" aria-hidden="true"></i>
             </span>
-        </div>
+        </div> -->
 
         <!-- script tag -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -791,38 +791,18 @@
 
 
         <!-- tooltip -->
-        <!-- <script>$('[data-toggle="tooltip"]').tooltip({
+        <script>$('[data-toggle="tooltip"]').tooltip({
                 trigger: "hover",
             });
             $(".fa").click(function () {
                 $('[data-toggle="tooltip"]').tooltip("hide");
-            });</script> -->
+            });</script>
 
         <!-- wowjs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script>
             new WOW().init();
         </script>
-
-        <!-- validation -->
-
-        <script>(function () {
-                'use strict';
-                window.addEventListener('load', function () {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation');
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(forms, function (form) {
-                        form.addEventListener('submit', function (event) {
-                            if (form.checkValidity() === false) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-                            form.classList.add('was-validated');
-                        }, false);
-                    });
-                }, false);
-            })();</script>
 
         <!-- swiperjs -->
         <script>
@@ -900,20 +880,7 @@
 
         <!-- TypeWriter -->
         <script>
-            // back to top
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 300) {
-                    $(".scroll-top-top").fadeIn("300");
-                } else {
-                    $(".scroll-top-top").fadeOut("200");
-                }
-            });
 
-            $(document).ready(function () {
-                $(".scroll-top-top").on("click", function () {
-                    $("html, body").animate({ scrollTop: 0 }, "");
-                });
-            });
             class TypeWriter {
                 constructor(txtElement, words, wait = 3000) {
                     this.txtElement = txtElement;
@@ -980,10 +947,20 @@
                 new TypeWriter(txtElement, words, wait);
             }
 
+            // // back to top
+            // $(window).scroll(function () {
+            //     if ($(this).scrollTop() > 300) {
+            //         $(".scroll-top-top").fadeIn("300");
+            //     } else {
+            //         $(".scroll-top-top").fadeOut("200");
+            //     }
+            // });
 
-
-
-
+            // $(document).ready(function () {
+            //     $(".scroll-top-top").on("click", function () {
+            //         $("html, body").animate({ scrollTop: 0 }, "");
+            //     });
+            // });
         </script>
 
 </body>
