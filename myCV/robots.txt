@@ -1,0 +1,10 @@
+user-agent: feedjira
+disallow: /
+
+user-agent: magie-crawler
+disallow: /
+
+user-agent: *
+allow: /
+
+Sitemap: https://thanh-profile.vercel.app/sitemap.xml

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy game by key code</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="box">
+        <a class="hover_image" href="#">
+            <div class="cardd" onmouseover="hover(this)" onmouseout="removeHover(this)">
+                <img src="https://pbs.twimg.com/profile_images/823569976342773760/c2RLAG7h_400x400.jpg" />
+            </div>
+
+            <div class="cardd-hover">
+                <img src="https://img.vn/uploads/video/ve-img-1565165030-3mysy.png" class="hide" />
+
+                <div class="button">
+                    <button>1</button>
+                    <button>2</button>
+                </div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illo soluta delectus!
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- <button class="button">Hover Toggle</button> -->
+
+    <!-- <div class="cardd-hover">
+        fade animation
+    </div> -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
+<script>
+    var item = document.getElementsByClassName("cardd-hover")[0]
+
+    // onmouseover
+        function hover() {
+
+            item.classList.add('is-visible');
+
+            setTimeout(function () {
+                item.classList.add('is-open');
+            }, 50);
+        }
+        function removeHover() {
+            item.classList.remove('is-open');
+            setTimeout(function () {
+                item.classList.remove('is-visible');
+            }, 500);
+
+        }
+</script>
+
+</html>

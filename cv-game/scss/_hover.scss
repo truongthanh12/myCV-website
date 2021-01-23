@@ -1,0 +1,37 @@
+/* box card  */
+.box {
+  padding: 4rem;
+  .cardButton {
+    display: flex;
+  }
+  /* npm run scss */
+
+  .unhover {
+    p {
+      display: none;
+    }
+
+    &:hover {
+      p {
+        display: block;
+      }
+    }
+
+    &:hover ~ .hover {
+      display: block;
+    }
+
+    &:hover {
+      display: none;
+    }
+  }
+
+  .unhover img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .hover {
+    display: none;
+  }
+}
