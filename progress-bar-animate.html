@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress bar animate</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+        section {
+            line-height: 2;
+            padding-top: 60px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 260px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        div,
+        p {
+            color: burlywood;
+            font-size: 28px;
+        }
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 10px;
+            background-image: linear-gradient(to right, red, black);
+            border-radius: 2px;
+            transition: width 0.2s ease;
+        }
+    </style>
+    <div id="progress"></div>
+    <section>
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dignissimos.</h1>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro repellendus ex beatae ut doloremque labore
+            in eum, obcaecati assumenda mollitia rem esse error atque libero earum quisquam eius amet sit?</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis temporibus alias distinctio laudantium sed
+            natus minima, corporis ex a quo modi eos perspiciatis, ipsum dicta quis cupiditate. Praesentium, earum
+            reprehenderit!
+            Laborum ullam cupiditate, atque nam rerum accusantium nihil consequatur facere esse sit voluptates enim nisi
+            accusamus deleniti expedita adipisci laudantium debitis commodi! Quaerat totam expedita autem excepturi
+            unde. Nesciunt, ab.
+            Tempore, laboriosam facere! Vero enim, velit nulla sed soluta provident reprehenderit, deleniti voluptatum
+            sequi aspernatur consequatur reiciendis voluptates illo fugiat minus delectus nesciunt repudiandae corporis
+            accusamus officia! Dignissimos, quo ducimus.
+            Exercitationem ea non iure! Aliquid repudiandae id iste! Voluptatibus id facilis, necessitatibus ratione
+            maxime incidunt voluptas quis adipisci ullam, error corporis numquam dicta impedit cupiditate quibusdam ab
+            iure quia quasi.
+            Sapiente possimus quod, tempora perspiciatis doloremque eum expedita tempore fugit tenetur velit dolorem
+            ipsam accusantium. Repudiandae tenetur ut animi libero, fuga accusamus, recusandae et, est at debitis sequi
+            sint nostrum.
+            Consequatur veniam ab rem eius necessitatibus accusamus aperiam earum! Temporibus tempore eius unde dolor
+            cupiditate libero ullam suscipit laboriosam sed. Doloremque, recusandae. Delectus aliquid perferendis
+            deserunt, laudantium molestiae ullam totam?</p>
+
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ab ea fugit explicabo qui eius quidem
+            rerum, quae accusamus itaque voluptatibus asperiores at nam tenetur nostrum minus! Sapiente, quis molestias.
+        </div>
+    </section>
+</body>
+
+<script async>
+    const progress = document.getElementById("progress")
+    const body = document.body
+
+    const animationProgressBar = () => {
+        let scrollDistance = -body.getBoundingClientRect().top;
+        let progressWidth = (scrollDistance / (body.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100
+        let value = Math.floor(progressWidth)
+        progress.style.width = value + "%"
+    }
+    window.addEventListener("scroll", animationProgressBar)
+</script>
+
+</html>

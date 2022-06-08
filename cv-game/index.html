@@ -15,6 +15,12 @@
 
 <body>
     <div id="animatedBackground">
+        <div class="time flex" style="font-size: 36px">
+            <p class="day"></p>
+            <p class="hour"></p>
+            <p class="minute"></p>
+            <p class="second"></p>
+        </div>
         <div class="guide guide--channel-tip">
             <div class="guide-wrapper flex">
                 <p class="text">
@@ -100,7 +106,7 @@
         var checkOffsetSticky = getClassStation1.offsetLeft;
         console.log(checkOffsetSticky);
 
-        let circle = document.querySelector(".slide-penguin");
+        let circle = document.querySelector(".penguin");
         let moveBy = 40;
 console.log(circle)
         window.addEventListener("load", () => {
@@ -109,7 +115,7 @@ console.log(circle)
         });
 
         //get width penguin
-        let widthPeguin = document.getElementsByClassName("slide-penguin")[0];
+        let widthPeguin = document.getElementsByClassName("penguin")[0];
         let offsetPeguin = widthPeguin.offsetLeft;
 
         console.log(checkOffsetSticky, offsetPeguin)
@@ -172,6 +178,32 @@ console.log(circle)
         document.getElementsByClassName("guide")[0].style.display = "none";
     }
 
+
+    // /get time
+    setInterval(() => {
+        const countDay = new Date("Aug 12, 2022 00:00:00").getTime()
+        const now = new Date().getTime();
+        const gap = countDay - now
+
+        // time work 
+        const second = 1000
+        const minute = second * 60
+        const hour = minute * 60
+        const day = hour * 24
+
+        // calculate 
+        const textDay = Math.floor(gap / day)
+        document.getElementsByClassName("day")[0].innerText = textDay + "Days"
+        const textHour = Math.floor((gap % day) / hour)
+        document.getElementsByClassName("hour")[0].innerText = textHour + "Hours"
+        const textminute = Math.floor((gap % hour) / minute)
+        document.getElementsByClassName("minute")[0].innerText = textminute + "Minutes"
+        const textSecond = Math.floor((gap % minute) / second)
+        document.getElementsByClassName("second")[0].innerText = textSecond + "Seconds"
+        return () => {
+            clearInterval()
+        }
+    }, 1000)
 </script>
 
 </html>
